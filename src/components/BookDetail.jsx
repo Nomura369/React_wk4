@@ -5,8 +5,10 @@ function BookDetail({ book }) {
 
     const [qty, setQty] = useState(book.stock > 0 ? 1 : 0);
 
+    const reviews = book.reviews;
+
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-24 gap-8 justify-center pt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-24 gap-8 justify-center py-4">
             {/* 左側：產品圖片（佔6/24） */}
             <div className="lg:col-span-6 lg:col-start-3">
                 <img
@@ -48,10 +50,30 @@ function BookDetail({ book }) {
                     <AddToBasket />
                 </div>
             </div>
+            {/* 買家評論區：佔滿整行（24格） */}
+            <div className="lg:col-span-20 lg:col-start-3 rounded-lg">
+                <h1 className="text-xl font-bold text-white mb-4">Customer Reviews</h1>
 
-            {/* 顧客評價 */}
-            <div>
-                
+                {/* 如果沒有評論 */}
+                {reviews.length === 0 ?
+                    (<p className="text-gray-300">No reviews yet.</p>) :
+                    (
+                        <div className="space-y-4">
+                            {reviews.map((review, index) => (
+                                <div key={index} className="bg-stone-800 p-4 rounded-lg">
+                                    <div className="flex">
+                                        <h2 className="text-white font-semibold mr-5">{review.reviewer}</h2>
+                                        <p className="text-yellow-200">{review.rating} / 5</p>
+                                        {
+                                            
+                                        }
+                                        <img alt="star" src="/images/star.svg" />
+                                    </div>
+                                    <p className="text-gray-300">{review.comment}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
             </div>
         </div>
     );
