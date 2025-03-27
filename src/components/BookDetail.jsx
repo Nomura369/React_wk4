@@ -64,9 +64,6 @@ function BookDetail({ book }) {
                                     <div className="flex">
                                         <h2 className="text-white font-semibold mr-5">{review.reviewer}</h2>
                                         <p className="text-yellow-200">{review.rating} / 5</p>
-                                        {
-                                            
-                                        }
                                         <img alt="star" src="/images/star.svg" />
                                     </div>
                                     <p className="text-gray-300">{review.comment}</p>
