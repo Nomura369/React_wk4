@@ -11,7 +11,7 @@ function Header({ title, slogan }) {
             </Link>
 
             <p className="text-white opacity-80 text-base leading-relaxed xl:w-1/2 lg:w-3/4 mx-auto">
-                {slogan + "✨"}
+                {slogan}
             </p>
             <div className="flex mt-6 justify-center">
                 <hr className="my-[25px] mx-auto w-[100px] border-0 border-t-[3px] border-blue-400 opacity-100 rounded" />

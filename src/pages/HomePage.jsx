@@ -12,7 +12,7 @@ function HomePage() {
             <Helmet><title>{title}</title></Helmet>
             <Header
                 title={title}
-                slogan="Step Into the Future of Reading AI-Painted and Human-Written Books"
+                slogan="Step Into the Future of Reading AI-Painted and Human-Written Books✨"
             />
             <BookList books={books} className="content" />
             <Footer className="footer" />
