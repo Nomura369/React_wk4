@@ -1,5 +1,4 @@
 //import "antd/dist/reset.css"
-//import _ from "lodash"
 import { BrowserRouter, Routes, Route } from 'react-router'
 import { HelmetProvider } from 'react-helmet-async'
 
@@ -13,7 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/:bookId" element={<BookPage />} />
+          <Route path="bookstore">
+            <Route path="genre/:genreName" element={<HomePage />} />
+            <Route path="book/:bookId" element={<BookPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

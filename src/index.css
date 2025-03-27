@@ -2,19 +2,18 @@
 @source "./pages";
 @source "./components";
 @plugin "daisyui";
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   default: true;
-  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
-  color-scheme: light; /* color of browser-provided UI */
-  /*--color-primary: #6366F2;*/
-}
+  prefersdark: false;
+  color-scheme: light;
+  --color-primary: #6366F2;
+} */
+
 
 html,
 body {
   font-size: 16px;
   line-height: 1.6;
-  /* background-color: #111828; */
-  /* color: white; */
 }
 
 .main-layout {

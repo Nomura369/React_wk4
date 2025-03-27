@@ -9,11 +9,10 @@ function HomePage() {
 
     return (
         <div className="container mx-auto main-layout min-h-screen">
-            {/*原本的背景色類別是bg-gray-900（來自tailwind）*/}
             <Helmet><title>{title}</title></Helmet>
             <Header
-                // title={title}
-                // slogan="The best place to buy your favorite products"
+                title={title}
+                slogan="Step Into the Future of Reading AI-Painted and Human-Written Books"
             />
             <BookList books={books} className="content" />
             <Footer className="footer" />
