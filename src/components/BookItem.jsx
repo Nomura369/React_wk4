@@ -5,7 +5,7 @@ function BookItem({ book }) {
    return (
       <section className="pt-4 px-3 lg:px-4">
          <div className="border rounded border-stone-800 bg-stone-800 overflow-hidden">
-            <Link to={`/bookstore/book/${book.ID}`}>
+            <Link to={`/book/${book.ID}`}>
                <img className="w-full" src={book.cover} alt={book.title} />
             </Link>
             <div className="p-4">
@@ -19,7 +19,7 @@ function BookItem({ book }) {
                   {_.truncate(book.summary, { length: 60, omission: " ... " })}
                </p>               
                <div className="flex justify-between flex-wrap">
-                  <Link to={`/bookstore/book/${book.ID}`} 
+                  <Link to={`/book/${book.ID}`} 
                         className="no-underline text-blue-400 flex items-center hover:font-semibold">
                      See More
                      <svg width="24" height="24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">

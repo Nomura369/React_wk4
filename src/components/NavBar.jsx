@@ -3,11 +3,11 @@ import { NavLink } from 'react-router';
 export default function NavBar() {
 
   const navBarContent = [
-    { to: "/bookstore/genre/fiction", label: "Fiction" },
-    { to: "/bookstore/genre/science", label: "Science" },
-    { to: "/bookstore/genre/art", label: "Art" },
-    { to: "/bookstore/genre/history", label: "History" },
-    { to: "/bookstore/genre/travel", label: "Travel" },
+    { to: "/genre/fiction", label: "Fiction" },
+    { to: "/genre/science", label: "Science" },
+    { to: "/genre/art", label: "Art" },
+    { to: "/genre/history", label: "History" },
+    { to: "/genre/travel", label: "Travel" },
   ];  
 
   return (

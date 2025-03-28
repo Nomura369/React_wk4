@@ -12,10 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="bookstore">
-            <Route path="genre/:genreName" element={<HomePage />} />
-            <Route path="book/:bookId" element={<BookPage />} />
-          </Route>
+          <Route path="genre/:genreName" element={<HomePage />} />
+          <Route path="book/:bookId" element={<BookPage />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
