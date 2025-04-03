@@ -15,7 +15,7 @@ function BookPage() {
             <Helmet><title>{title}</title></Helmet>
             <Header
                 title={title}
-                slogan="Books Are Awesome, More Is Better❤️"
+                slogan="Books Are Awesome, More Is Better👍"
             />
             <BookDetail book={book} className="content" />
             <Footer className="footer" />

@@ -3,6 +3,7 @@ import AddToBasket from "./AddToBasket"
 
 function BookDetail({ book }) {
 
+    const [isFavorite, setIsFavorite] = useState(false);
     const [qty, setQty] = useState(book.stock > 0 ? 1 : 0);
 
     const reviews = book.reviews;
@@ -19,10 +20,18 @@ function BookDetail({ book }) {
             </div>
 
             {/* 右側：產品資訊（佔14/24） */}
-            <div className="lg:col-span-14 px-4">
-                <h1 className="text-white text-2xl font-bold mb-1">{book.title}</h1>
+            <div className="lg:col-span-14 px-4 content-center">
+                <div className="flex items-center justify-between mb-4">
+                    <h1 className="text-white text-2xl font-bold mb-1">{book.title}</h1>
+                    <img
+                        src={isFavorite ? "/images/favorite_filled.svg" : "/images/favorite_outlined.svg"}
+                        alt="Favorite"
+                        onClick={() => setIsFavorite(!isFavorite)}
+                        className="cursor-pointer"
+                    />
+                </div>
                 <h2 className="text-white opacity-80 mb-5 text-lg">{book.author}</h2>
-                <p className="text-white opacity-50 text-base mb-5">{book.summary}</p>
+                <p className="text-white opacity-50 text-base mb-5 text-justify">{book.summary}</p>
 
                 {/* 價格與按鈕 */}
                 <div className="flex flex-col gap-4">
@@ -31,7 +40,7 @@ function BookDetail({ book }) {
                         <span className="font-bold" >Status</span>: {book.stock > 0 ? "In Stock" : "Unavailable"}
                     </p>
                     <div className="flex items-center gap-2">
-                        <span className="font-bold text-blue-300" >Qty:</span>
+                        <span className="font-bold text-blue-300" >Quantity:</span>
                         <select
                             className="select select-bordered w-20 bg-white"
                             defaultValue={book.stock > 0 ? 1 : 0}
